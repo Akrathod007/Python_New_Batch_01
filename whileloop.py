@@ -244,6 +244,8 @@ while True:
                     print("You Selected Khichdi Kadhi")
                 case 5:
                     print("You Selected Undhiyu")
+                case 6:
+                    continue
 
             qty = int(input("How much do you want : "))
             if ch2 == 1:
