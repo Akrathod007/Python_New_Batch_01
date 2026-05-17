@@ -211,45 +211,70 @@ print(x.istitle())
 
 x = "Hi"
 
-print(x.center(10, "-"))
-print(x.center(10))
+# print(x.center(10, "-"))
+# print(x.center(10))
 
-print(x.ljust(10, "-"))
-print(x.rjust(10, "-"))
+# print(x.ljust(10, "-"))
+# print(x.rjust(10, "-"))
 
-x = "Bye"
-print(x.center(10, "-"))
-print(x.ljust(10, "-"))
-print(x.rjust(10, "-"))
+# x = "Bye"
+# print(x.center(10, "-"))
+# print(x.ljust(10, "-"))
+# print(x.rjust(10, "-"))
 
-x = "42"
-print(x.zfill(10))
+# x = "42"
+# print(x.zfill(10))
 
-name = "Doremon"
-age = 21
+# name = "Doremon"
+# age = 21
 
-print("Name is {} and age is {}".format(name, age))
-print("Name is {} and age is {}".format(age, name))
+# print("Name is {} and age is {}".format(name, age))
+# print("Name is {} and age is {}".format(age, name))
 
-print("Name is {name}".format_map({"name": "Ansh"}))
+# print("Name is {name}".format_map({"name": "Ansh"}))
 
-print(len(name))
-print("Name is", name, "age is", age)
-print(f"Name is {name} and age is {age}")
+# print(len(name))
+# print("Name is", name, "age is", age)
+# print(f"Name is {name} and age is {age}")
 
-print("My name is %s and I am %d years old." % (name, age))
+# print("My name is %s and I am %d years old." % (name, age))
 # print("My name is %s and I am %d years old." % (age, name))
 
 
-print("Hello\nWorld")
-print("Hello\tWorld")
-print("Hello\b\bWorld")
-print('"Hello"')  # "Hello"
-print("'Hello'")
-print("'''Hello'''")
+# print("Hello\nWorld")
+# print("Hello\tWorld")
+# print("Hello\b\bWorld")
+# print('"Hello"')  # "Hello"
+# print("'Hello'")
+# print("'''Hello'''")
 
-print("'hello\"")
-print("\\Hello\\")
+# print("'hello\"")
+# print("\\Hello\\")
 
-print("\101")
-print("\x4e")
+# print("\101")
+# print("\x4e")
+
+"""
+no -> 100
+
+1 to 100:
+
+How many prime number : 
+
+"""
+
+no = int(input("Enter a number : "))
+
+pc = 0
+
+for i in range(1, no + 1):
+    n = i
+    f = 0
+    for j in range(1, n + 1):
+        if n % j == 0:
+            f += 1
+    if f == 2:
+        print(n)
+        pc += 1
+
+print("No of Prime Numbers :", pc)
