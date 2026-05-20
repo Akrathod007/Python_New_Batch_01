@@ -580,7 +580,7 @@ print("Longest String :", longest)
 input : hello python and hello javascript
 output : Hello Python And Hello Javascript
 """
-
+"""
 s = input("Enter a string : ")
 # print(s.title())
 
@@ -602,3 +602,35 @@ for i in s:
         # r = H + e -> He
 
 print("Result is :", r)
+
+"""
+"""
+input => HellO WOrld
+
+"""
+
+s = input("Enter a string : ")
+
+# print(s.swapcase())
+
+# print(ord("A"))
+# print(chr(97))
+
+
+for i in s:
+    print(i)
+
+
+for i in range(len(s)):
+    print(i, "->", s[i])
+
+
+x = ""
+'''
+x = x + ch
+x = "" + D -> D
+
+x = D + o -> Do
+
+ch != " "
+'''
