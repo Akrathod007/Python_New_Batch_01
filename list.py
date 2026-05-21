@@ -288,7 +288,7 @@ l1 = [1,0,0,2,3,0,2]
 
 result = [1,2,3,2,0,0,0]
 """
-
+"""
 l1 = [1, 0, 0, 2, 3, 0, 2]
 
 result = []
@@ -303,3 +303,53 @@ for i in range(1, zeroCount + 1):
     result.append(0)
 
 print(result)
+
+"""
+
+
+# l1 = [[1, 2, 3], [4, 5, 6], [[1, 2, 3, 4, 5, 6], 8, 9]]
+
+# print(len(l1))
+# print(len(l1[0]))
+
+# print(l1[1][1])
+# print(l1[2][0][3])
+# print(l1[2][0][-5])
+# print(l1[2][1][0:4])
+
+# l1 = [[1, 2, 3], [4, 5, 6], [6, 7, 8]]
+
+# for i in l1:
+#     print(i)
+#     for j in i:
+#         print(j)
+
+
+# i = 0
+
+# while i < len(l1):
+#     print(l1[i])
+#     j = 0
+#     while j < len(l1[i]):
+#         print(l1[i][j])
+#         j += 1
+#     i += 1
+
+
+l1 = [[1, 2, 3], [4, 5, 6], [6, 7, 8]]
+
+"""
+result = []
+
+for i in l1:
+    for j in i:
+        result.append(j)
+
+print("Result :", result)
+"""
+
+for i in l1:
+    sum = 0
+    for j in i:
+        sum += j
+    print("Sum :", sum)
