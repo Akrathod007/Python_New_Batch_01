@@ -336,7 +336,11 @@ print(result)
 #     i += 1
 
 
-l1 = [[1, 2, 3], [4, 5, 6], [6, 7, 8]]
+# l1 = [
+# [1, 2, 3],
+# [4, 5, 6],
+# [6, 7, 8]
+# ]
 
 """
 result = []
@@ -348,8 +352,118 @@ for i in l1:
 print("Result :", result)
 """
 
-for i in l1:
-    sum = 0
-    for j in i:
-        sum += j
-    print("Sum :", sum)
+# for i in l1:
+#     sum = 0
+#     for j in i:
+#         sum += j
+#     print("Sum :", sum)
+
+
+"""
+
+00  01 02
+[1, 2, 3],
+
+10  11 12 
+[4, 5, 6],
+
+20  21 22 
+[6, 7, 8]
+
+"""
+"""
+l1 = [[1, 2, 13], [4, 5, 6], [6, 7, 8]]
+lsum = 0
+rsum = 0
+for i in range(len(l1)):
+    print(l1[i])
+    for j in range(len(l1[i])):
+        if i == j:
+            lsum = lsum + l1[i][j]
+
+        if i + j == 2:
+            rsum = rsum + l1[i][j]
+        print(l1[i][j])
+
+print("Left Diagonal Sum is", lsum)
+print("Right Diagonal Sum is", rsum)
+
+"""
+
+# l1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# l2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# l3 = []
+
+"""
+l1 = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+l2 = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+l3 = [
+    [2,4,6],
+    [8,10,12],
+    [14,16,18]
+]
+"""
+
+# for i in range(len(l1)):
+#     # print(l1[i])
+#     # print(l2[i])
+#     il = []
+#     for j in range(len(l1[i])):
+#         # x = l1[i][j] + l2[i][j]
+#         # il.append(x)
+#         il.append(l1[i][j] + l2[i][j])
+#     l3.append(il)
+#     # print(il)
+# print(l3)
+
+
+"""
+
+no = 10
+
+l1 = [23,56,]
+"""
+
+# no = int(input("Enter a number you want in list: "))
+
+# l1 = []
+
+# for i in range(1, no + 1):
+#     n = int(input("Enter a list element : "))
+#     l1.append(n)
+
+# print(l1)
+
+
+"""
+r -> 3
+c -> 3
+
+
+"""
+
+row = int(input("Enter a row number :"))
+col = int(input("Enter a column number : "))
+
+ol = []
+
+for i in range(row):
+    il = []
+    for j in range(col):
+        no = int(input("Enter a number : "))
+        il.append(no)
+    print(il)
+    ol.append(il)
+
+print(ol)
