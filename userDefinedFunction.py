@@ -217,7 +217,7 @@ print(demo())
 
 # add(c=10, a=20, b=30)
 
-
+"""
 def add(a, b, *args):
     print(a)
     print(b)
@@ -225,3 +225,120 @@ def add(a, b, *args):
 
 
 add(10, 20, 30, 40, 50, 60)
+
+
+def li(*args):
+    print(args)
+
+
+l1 = [1, 2, 3, 4, 5]
+li(l1)
+li(*l1)
+
+
+"""
+
+
+# def demo(a, b, *args, **x):
+#     print(a)
+#     print(b)
+#     print(args)
+#     print(x)
+
+
+# demo(10, 20, 30, 40, 50, name="Ram", age=21)
+
+
+# def demo2(**kargs):
+#     print(kargs)
+
+
+# d = {"City": "Ahm", "State": "Guj"}
+
+# demo2(**d)
+
+"""
+def sayHi():
+    print("Hello")
+
+
+x = sayHi
+
+x()
+
+"""
+
+"""
+def greet():
+    print("Hello")
+
+
+def call_fun(func):
+    func()
+
+
+call_fun(greet)
+
+"""
+
+"""
+def outer():
+    def inner():
+        print("Inner Function")
+
+    return inner
+
+
+x = outer()
+x()
+
+x = outer
+x()()
+
+"""
+
+"""
+def add(a, b):
+    return a + b
+
+
+def sub(a, b):
+    return a - b
+
+
+def mul(a, b):
+    return a * b
+
+
+def div(a, b):
+    return a / b
+
+
+op = [add, sub, mul, div]
+print(op)
+
+print(op[0](10, 20))
+print(op[1](10, 20))
+print(op[2](10, 20))
+print(op[3](10, 20))
+
+"""
+
+
+def outer():
+    x = 10
+    print("Outer function")
+
+    def inner():
+        nonlocal x
+        print("Inner Function")
+        # print(x)
+        x = x + 10
+        print(x)
+
+    inner()
+
+
+outer()
+# inner()
+# print(x)
