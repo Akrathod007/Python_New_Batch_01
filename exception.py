@@ -68,8 +68,90 @@ except ValueError:
 #     print("Always Executes")
 
 
+# try:
+#     d = {"name": "Ram"}
+#     print(d["age"])
+# except:
+#     print("Error")
+
+
+# age = -5
+
+# if age < 0:
+#     raise ValueError("Age cannot be negative")
+
+# print("Valid Age")
+
+
+# balance = 500
+# withdraw = 1000
+
+# try:
+#     if withdraw > balance:
+#         raise ValueError("Insufficient Balance")
+# except ValueError as e:
+#     print("Error", e)
+
+
+class InvalidMarksError(Exception):
+    pass
+
+
+marks = -10
+
+# if marks < 0:
+#     raise InvalidMarksError("Marks cannot be negative")
+
+"""
 try:
-    d = {"name": "Ram"}
-    print(d["age"])
+    if marks < 0:
+        raise InvalidMarksError("Marks cannot be negative")
+
+except InvalidMarksError as e:
+    print("Error : ", e)
+
+
+try:
+    print("Outer Try")
+
+    try:
+        print(10 / 0)
+
+    except ZeroDivisionError:
+        print("Inner Except: Cannot divide by zero")
+
 except:
-    print("Error")
+    print("Outer Except")
+
+
+try:
+    print("Outer Try")
+
+    try:
+        num = int("abc")
+
+    except ZeroDivisionError:
+        print("Inner Except")
+
+except ValueError:
+    print("Outer Except: Invalid Number")
+
+"""
+
+
+try:
+    file = open("data.txt")
+
+    try:
+        data = int(file.read())
+        print(data)
+
+    except ValueError:
+        print("File contains invalid data")
+
+    finally:
+        file.close()
+        print("File Closed")
+
+except FileNotFoundError:
+    print("File Not Found")
