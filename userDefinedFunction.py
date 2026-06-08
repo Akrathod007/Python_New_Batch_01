@@ -325,20 +325,57 @@ print(op[3](10, 20))
 """
 
 
-def outer():
-    x = 10
-    print("Outer function")
+# def outer():
+#     x = 10
+#     print("Outer function")
 
-    def inner():
-        nonlocal x
-        print("Inner Function")
-        # print(x)
-        x = x + 10
-        print(x)
+#     def inner():
+#         nonlocal x
+#         print("Inner Function")
+#         # print(x)
+#         x = x + 10
+#         print(x)
 
-    inner()
+#     inner()
 
 
-outer()
+# outer()
 # inner()
 # print(x)
+
+
+def fact(n):
+    if n == 1 or n == 0:
+        return 1
+    return n * fact(n - 1)
+
+
+print(fact(500))
+
+# 1 to 10 -> Sum
+
+
+def sum(n):
+    if n == 1:
+        return 1
+    return n + sum(n - 1)
+
+
+print(sum(10))
+
+# 1 1 2 3 5 8
+
+
+def fibo(n):
+    if n == 1 or n == 2:
+        return 1
+    return fibo(n - 1) + fibo(n - 2)
+
+
+print(fibo(5))
+print(fibo(40))
+
+# for i in range(1, 10 + 1):
+#     print(fibo(i))
+# 5 -> 1 1 2 3 5
+# 10 -> 1 1 2 3 5 8 13 21 34 55

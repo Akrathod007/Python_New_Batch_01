@@ -94,13 +94,15 @@ except ValueError:
 
 
 class InvalidMarksError(Exception):
-    pass
+    def __init__(self, *args):
+        print(args)
+        super().__init__(*args)
 
 
 marks = -10
 
-# if marks < 0:
-#     raise InvalidMarksError("Marks cannot be negative")
+if marks < 0:
+    raise InvalidMarksError("Marks cannot be negative")
 
 """
 try:
