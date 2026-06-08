@@ -379,3 +379,94 @@ print(fibo(40))
 #     print(fibo(i))
 # 5 -> 1 1 2 3 5
 # 10 -> 1 1 2 3 5 8 13 21 34 55
+
+
+d = {}
+
+"""
+d = {
+    2:1
+    1:1
+    3:2
+    4:3
+}
+"""
+
+
+def fibo(n):
+    if n in d:
+        return d[n]
+    elif n == 1:
+        d[1] = 1
+        return 1
+    elif n == 2:
+        d[2] = 1
+        return 1
+    else:
+        d[n] = fibo(n - 1) + fibo(n - 2)
+        return fibo(n - 1) + fibo(n - 2)
+
+
+print(fibo(100))
+
+# reverse string
+# ram -> mar
+# s = m -> ra
+# s = ma -> r
+# s = mar -> ""
+
+
+def reverse(s):
+    if len(s) == 0:
+        return ""
+    return s[-1] + reverse(s[:-1])
+
+
+print(reverse("Ram"))
+
+
+# count digit of number
+# 456 -> 3
+# 1 -> 1
+# 9 -> 1
+
+
+# 456 -> 45 -> 4
+def d_count(n):
+    if n < 10:
+        return 1
+    return 1 + d_count(n // 10)
+
+
+print(d_count(456))
+
+# power : base ^ expo
+# 2^6 ->
+
+"""
+5! -> 5 * 4! -> 4 * 3! -> 3 * 2! -> 2 * 1!
+
+2^6 -> 2^1 * 2^5 -> 2^1 * 2^4 -> 2^1 * 2^0
+"""
+
+
+# def power(b, e):
+#     if e == 0:
+#         return 1
+#     return b * power(b, e - 1)
+
+
+# print(power(2, 6))
+
+
+# sum of digit of number
+# 456 -> 15
+
+
+def sum_digit(n):
+    if n < 10:
+        return n
+    return n % 10 + sum_digit(n // 10)
+
+
+print(sum_digit(45666))
