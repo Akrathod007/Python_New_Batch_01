@@ -170,41 +170,189 @@
 # print(p1)
 
 
-class Playlist:
+# class Playlist:
+#     def __init__(self, name):
+#         self.name = name
+#         self.songs = []
+
+#     def add_song(self, song):
+#         self.songs.append(song)
+#         print(f"Added: {song}")
+
+#     def remove_song(self, song):
+#         if song in self.songs:
+#             self.songs.remove(song)
+#             print(f"Removed: {song}")
+
+#     def show_songs(self):
+#         print(f"Playlist '{self.name}':")
+#         for song in self.songs:
+#             print(f"- {song}")
+
+
+# my_playlist = Playlist("Favorites")
+# my_playlist.add_song("Bohemian Rhapsody")
+# my_playlist.add_song("Stairway to Heaven")
+# my_playlist.show_songs()
+# my_playlist.remove_song("Bohemian Rhapsody")
+# my_playlist.show_songs()
+
+# my_playlist2 = Playlist("Happy")
+# my_playlist2.add_song("ABC")
+# my_playlist2.add_song("XYZ")
+# my_playlist2.show_songs()
+# my_playlist2.remove_song("XYZ")
+# my_playlist2.show_songs()
+
+
+# del my_playlist2.show_songs
+
+# my_playlist2.show_songs()
+
+
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.__marks = marks
+
+    def setMarks(self, marks):
+        self.__marks = marks
+
+    def getMarks(self):
+        return self.__marks
+
+
+s1 = Student("Ram", 98)
+
+print(s1.name)
+# print(s1.__marks)
+# s1.setMarks(90)
+print(s1.getMarks())
+
+
+class Animal:
+
+    def eat(self):
+        print("Animals eat food")
+
+
+class Dog(Animal):
+
+    def bark(self):
+        print("Dog barks")
+
+
+d = Dog()
+
+d.eat()
+d.bark()
+
+
+class Father:
+    def skill1(self):
+        print("Driving")
+
+
+class Mother:
+    def skill2(self):
+        print("Cooking")
+
+
+class Child(Father, Mother):
+    def skill3(self):
+        print("Playing")
+
+
+c = Child()
+c.skill1()
+c.skill2()
+c.skill3()
+
+
+class Grandfather:
+    def house(self):
+        print("Grandfather's house")
+
+
+class Father(Grandfather):
+    def car(self):
+        print("Father's car")
+
+
+class Son(Father):
+    def bike(self):
+        print("Son's bike")
+
+
+s = Son()
+
+s.house()
+s.car()
+s.bike()
+
+
+class Animal:
+    def eat(self):
+        print("Animals eat food")
+
+
+class Dog(Animal):
+    pass
+
+
+class Cat(Animal):
+    pass
+
+
+d = Dog()
+c = Cat()
+
+d.eat()
+c.eat()
+
+
+"""
+    Vehicle
+     /  \
+normal  sprots       
+  car     car
+    \    /
+      Electric 
+       car
+"""
+
+
+class Animal:
+
+    def sound(self):
+        print("Animals make sound")
+
+
+class Dog(Animal):
+
+    def sound(self):
+        super().sound()
+        print("Dog barks")
+
+
+d = Dog()
+d.sound()
+
+
+class Person:
+
     def __init__(self, name):
         self.name = name
-        self.songs = []
-
-    def add_song(self, song):
-        self.songs.append(song)
-        print(f"Added: {song}")
-
-    def remove_song(self, song):
-        if song in self.songs:
-            self.songs.remove(song)
-            print(f"Removed: {song}")
-
-    def show_songs(self):
-        print(f"Playlist '{self.name}':")
-        for song in self.songs:
-            print(f"- {song}")
 
 
-my_playlist = Playlist("Favorites")
-my_playlist.add_song("Bohemian Rhapsody")
-my_playlist.add_song("Stairway to Heaven")
-my_playlist.show_songs()
-my_playlist.remove_song("Bohemian Rhapsody")
-my_playlist.show_songs()
+class Student(Person):
 
-my_playlist2 = Playlist("Happy")
-my_playlist2.add_song("ABC")
-my_playlist2.add_song("XYZ")
-my_playlist2.show_songs()
-my_playlist2.remove_song("XYZ")
-my_playlist2.show_songs()
+    def __init__(self, name, marks):
+        super().__init__(name)
+        self.marks = marks
 
 
-del my_playlist2.show_songs
+s = Student("Ansh", 95)
 
-my_playlist2.show_songs()
+print(s.name)
+print(s.marks)
